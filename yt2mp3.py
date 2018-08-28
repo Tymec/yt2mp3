@@ -5,8 +5,8 @@ import youtube_dl
 import argparse
 import os
 from mutagen.easyid3 import EasyID3
-from mutagen.mp3 import MP3
 from mutagen.id3 import ID3, APIC
+import soundcloud_search
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
@@ -76,7 +76,9 @@ def get_info(sc):
 
 
 def get_sc(info):
-    pass
+    url = soundcloud_search.search(info.artist + " - " + info.title)
+    for track in url:
+        print(track)
 
 
 def tags(info):
@@ -101,10 +103,10 @@ def finish(info):
 if type(args.yt) and type(args.sc) == str:
     info = get_info(args.sc)
     get_sc(info)
-    download_sc(args.sc, info)
-    download_yt(args.yt, info)
-    tags(info)
-    finish(info)
+    # download_sc(args.sc, info)
+    # download_yt(args.yt, info)
+    # tags(info)
+    # finish(info)
 else:
     print("Wrong input")
     exit()
