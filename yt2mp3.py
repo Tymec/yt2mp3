@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 from urllib import request
+import requests
 from bs4 import BeautifulSoup as BS
 import youtube_dl
 import argparse
@@ -75,7 +76,14 @@ def get_info(sc):
 
 
 def get_sc(info):
-    pass
+    url = "https://soundcloud.com/search?q={}%20-%20{}"\
+        .format(
+            info.artist.replace(' ', '%20'),
+            info.title.replace(' ', '%20')
+        )
+    html = requests.get(url)
+    with open('html', 'w', encoding='UTF-8') as site:
+        site.write(html.text)
 
 
 def tags(info):
