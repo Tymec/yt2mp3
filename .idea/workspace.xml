@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a140bcc-e205-4c5d-b981-b09b05b92d96" name="Default" comment="" />
+    <list default="true" id="3a140bcc-e205-4c5d-b981-b09b05b92d96" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/LeaF - Alice In Misanthrope.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NEFFEX - Mirror.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/soundcloud_search.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yt2mp3.py" beforeDir="false" afterPath="$PROJECT_DIR$/yt2mp3.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +19,8 @@
       <file leaf-file-name="yt2mp3.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/yt2mp3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="80" column="14" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
+            <state relative-caret-position="-200">
+              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
                 <element signature="e#508#737#0" />
@@ -25,9 +30,9 @@
                 <element signature="e#1811#2151#0" />
                 <element signature="e#2185#2196#0" />
                 <element signature="e#442#473#0" />
-                <marker date="1535490344053" expanded="true" signature="297:421" ph="..." />
-                <marker date="1535490344053" expanded="false" signature="298:420" ph="..." />
-                <marker date="1535490344053" expanded="false" signature="442:566" ph="..." />
+                <marker date="1535490759485" expanded="true" signature="272:396" ph="..." />
+                <marker date="1535490759485" expanded="false" signature="273:395" ph="..." />
+                <marker date="1535490759485" expanded="false" signature="417:541" ph="..." />
               </folding>
             </state>
           </provider>
@@ -41,6 +46,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/soundcloud_search.py" />
         <option value="$PROJECT_DIR$/yt2mp3.py" />
       </list>
     </option>
@@ -156,10 +162,17 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/soundcloud_search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/yt2mp3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="80" column="14" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
+        <state relative-caret-position="-200">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <element signature="e#508#737#0" />
@@ -169,9 +182,9 @@
             <element signature="e#1811#2151#0" />
             <element signature="e#2185#2196#0" />
             <element signature="e#442#473#0" />
-            <marker date="1535490344053" expanded="true" signature="297:421" ph="..." />
-            <marker date="1535490344053" expanded="false" signature="298:420" ph="..." />
-            <marker date="1535490344053" expanded="false" signature="442:566" ph="..." />
+            <marker date="1535490759485" expanded="true" signature="272:396" ph="..." />
+            <marker date="1535490759485" expanded="false" signature="273:395" ph="..." />
+            <marker date="1535490759485" expanded="false" signature="417:541" ph="..." />
           </folding>
         </state>
       </provider>

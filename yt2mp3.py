@@ -6,7 +6,6 @@ import argparse
 import os
 from mutagen.easyid3 import EasyID3
 from mutagen.id3 import ID3, APIC
-import soundcloud_search
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
@@ -76,9 +75,7 @@ def get_info(sc):
 
 
 def get_sc(info):
-    url = soundcloud_search.search(info.artist + " - " + info.title)
-    for track in url:
-        print(track)
+    pass
 
 
 def tags(info):
