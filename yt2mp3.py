@@ -15,31 +15,64 @@ parser.add_argument(
     help="Link to the YouTube video",
     metavar="link",
     dest="yt"
-    )
+)
 parser.add_argument(
     '--sc',
     type=str,
-    required=True,
     help="Link to the SoundCloud song",
     metavar="link",
     dest="sc"
-    )
+)
+parser.add_argument(
+    '-m',
+    action="store_true",
+    help="Manual mode",
+    dest="manual"
+)
+parser.add_argument(
+    '-a',
+    type=str,
+    help="Artist",
+    metavar="artist",
+    dest="artist"
+)
+parser.add_argument(
+    '-t',
+    type=str,
+    help="Title",
+    metavar="title",
+    dest="title"
+)
+parser.add_argument(
+    '-c',
+    type=str,
+    help="Cover",
+    metavar="cover_art",
+    dest="cover_art"
+)
 args = parser.parse_args()
 
 
 class Song:
-    def __init__(self, title, artist):
+    def __init__(self, title, artist, cover_art=None):
         self.title = title
         self.artist = artist
-        self.album = title.split('(')[0]
-        self.cover = "{} - {}.jpg".format(artist, title)
-        self.mp3 = "{} - {}.mp3".format(artist, title)
+        if self.title.find('-') is not -1:
+            self.title = self.title.split(' - ')[1]
+            self.artist = self.title.split(' - ')[0]
+        self.album = self.title.split('(')[0]
+        self.full_song = "{} - {}".format(self.artist, self.title)
+        self.cover = "{} - {}.jpg".format(self.artist, self.title)
+        self.mp3 = "{} - {}.mp3".format(self.artist, self.title)
+
+        if cover_art is not None:
+            self.cover = cover_art
 
 
 def download_yt(yt, info):
     ydl_opts = {
         'format': 'bestaudio/best',
-        'outtmpl': info.mp3[:-4] + '.%(ext)s',
+        'outtmpl': 'downloads//' + info.full_song + '.%(ext)s',
         'postprocessors': [{
             'key': 'FFmpegExtractAudio',
             'preferredcodec': 'mp3',
@@ -81,14 +114,14 @@ def get_sc(info):
 def tags(info):
     image = open(info.cover, 'rb').read()
 
-    audio = EasyID3(info.mp3)
+    audio = EasyID3('downloads\\' + info.mp3)
     audio['artist'] = info.artist
     audio['title'] = info.title
     audio['album'] = info.album
     audio['albumartist'] = info.artist
     audio.save(v2_version=3)
 
-    audio = ID3(info.mp3)
+    audio = ID3('downloads\\' + info.mp3)
     audio.add(APIC(3, 'image/jpeg', 3, 'Front cover', image))
     audio.save(v2_version=3)
 
@@ -97,14 +130,18 @@ def finish(info):
     os.remove(info.cover)
 
 
-if type(args.yt) and type(args.sc) == str:
+if args.manual:
+    info = Song(args.title, args.artist, args.cover_art)
+    download_yt(args.yt, info)
+    tags(info)
+    finish(info)
+elif type(args.yt) and type(args.sc) == str:
     info = get_info(args.sc)
-    get_sc(info)
-    # download_sc(args.sc, info)
-    # download_yt(args.yt, info)
-    # tags(info)
-    # finish(info)
+    # get_sc(info)
+    download_sc(args.sc, info)
+    download_yt(args.yt, info)
+    tags(info)
+    finish(info)
 else:
     print("Wrong input")
     exit()
-
