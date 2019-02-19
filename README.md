@@ -14,6 +14,11 @@
 python yt2mp3 --yt <youtube link> -m -a <Artist> -t <title> -c <cover image path>
 ```
 
+*Installation:*
+```
+pip install -r requirements.txt
+```
+
 *To do:*
 - Implement SoundCloud API (currently new API keys are not available)
 - Add album name as a separate manual tag
@@ -21,4 +26,5 @@ python yt2mp3 --yt <youtube link> -m -a <Artist> -t <title> -c <cover image path
 - Get rid of soundcloud link argument (not reliable)
 - Create a way to bulk convert from a text file
 - Create a UI
-- 
+- Remove virtualenv folder
+- Create a requirements.txt
