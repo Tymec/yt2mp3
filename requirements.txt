@@ -2,7 +2,4 @@ youtube_dl
 requests
 urllib3
 mutagen
-idna
-chardet
-certifi
 bs4
