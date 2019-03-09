@@ -6,6 +6,7 @@
 - **"-a"** - Artist
 - **"-t"** - Title
 - **"-c"** - Cover image path
+- **"-b"** - Album (OPTIONAL)
 
 *Example usage:*
 ```
