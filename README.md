@@ -20,7 +20,9 @@ pip install -r requirements.txt
 
 *To do:*
 - Implement SoundCloud API (currently new API keys are not available)
-- Create a way to bulk convert from a text file
-- Create a UI
-- Remove virtualenv folder
+- Implement Spotify API
+- Implement YouTube API
+- Implement bulk downloading
+- Fix READ.ME
 - Create a requirements.txt
+- Fix memory leaks
