@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>App</class>
+ <widget class="QMainWindow" name="App">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>479</width>
+    <height>241</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>yt2mp3</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Git Repos/yt2mp3 Project/yt2mp3.png</normaloff>../Git Repos/yt2mp3 Project/yt2mp3.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QCheckBox" name="isSingle">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>90</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Is a single</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>461</width>
+      <height>79</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="bottomWidgets">
+     <item>
+      <layout class="QHBoxLayout" name="songLinkGroup">
+       <item>
+        <layout class="QVBoxLayout" name="linkLabelGroup">
+         <item>
+          <widget class="QLabel" name="youtubeLinkLabel">
+           <property name="frameShadow">
+            <enum>QFrame::Plain</enum>
+           </property>
+           <property name="text">
+            <string>YouTube Link</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="coverArtLinkLabel">
+           <property name="text">
+            <string>Cover Art Link</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="linkInputGroup">
+         <item>
+          <widget class="QLineEdit" name="youtubeLinkInput">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string>Link to the YouTube song to download</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="coverArtLinkInput">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string>Link or path to the cover art</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QProgressBar" name="progressBar">
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="value">
+        <number>24</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>10</y>
+      <width>331</width>
+      <height>82</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="topWidgets">
+     <item>
+      <layout class="QHBoxLayout" name="songTagGroup">
+       <item>
+        <layout class="QVBoxLayout" name="tagLabelGroup">
+         <item>
+          <widget class="QLabel" name="titleLabel">
+           <property name="text">
+            <string>Title</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="artistLabel">
+           <property name="text">
+            <string>Artist</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="albumlabel">
+           <property name="text">
+            <string>Album</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="tagInputGroup">
+         <item>
+          <widget class="QLineEdit" name="titleInput">
+           <property name="inputMask">
+            <string/>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string>Title of the song</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="artistInput">
+           <property name="inputMask">
+            <string/>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string>Name of the artist</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="albumInput">
+           <property name="inputMask">
+            <string/>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="readOnly">
+            <bool>false</bool>
+           </property>
+           <property name="placeholderText">
+            <string>Name of the album</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="actionGroup">
+       <item>
+        <widget class="QPushButton" name="downloadButton">
+         <property name="text">
+          <string>Download</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="playSongButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Play Song</string>
+         </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="tagGrabberOption">
+         <item>
+          <property name="text">
+           <string>Manual</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>YouTube</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Spotify</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SoundCloud</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="coverArtPreview">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>121</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>479</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuNew_Song">
+     <property name="title">
+      <string>New Song</string>
+     </property>
+     <addaction name="actionSingle_2"/>
+     <addaction name="actionBulk"/>
+    </widget>
+    <addaction name="actionExit_3"/>
+    <addaction name="menuNew_Song"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionImport_text_file">
+   <property name="text">
+    <string>Import text file</string>
+   </property>
+  </action>
+  <action name="actionFrom_text_file">
+   <property name="text">
+    <string>Multiple</string>
+   </property>
+  </action>
+  <action name="actionVia_UI">
+   <property name="text">
+    <string>Single</string>
+   </property>
+  </action>
+  <action name="actionGet_Tags_from_Soundcloud">
+   <property name="text">
+    <string>Get Tags from Soundcloud</string>
+   </property>
+  </action>
+  <action name="actionGet_Tags_from_Spotify">
+   <property name="text">
+    <string>Get Tags from Spotify</string>
+   </property>
+  </action>
+  <action name="actionGet_Tags_from_Youtube">
+   <property name="text">
+    <string>Get Tags from Youtube</string>
+   </property>
+  </action>
+  <action name="actionManual">
+   <property name="text">
+    <string>Manual</string>
+   </property>
+  </action>
+  <action name="actionExit_2">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionSingle">
+   <property name="text">
+    <string>Single</string>
+   </property>
+  </action>
+  <action name="actionMultiple">
+   <property name="text">
+    <string>Multiple</string>
+   </property>
+  </action>
+  <action name="actionExit_3">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionSingle_2">
+   <property name="text">
+    <string>Single</string>
+   </property>
+  </action>
+  <action name="actionBulk">
+   <property name="text">
+    <string>Multiple</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
