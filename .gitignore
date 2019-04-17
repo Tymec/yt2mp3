@@ -2,3 +2,6 @@
 .idea
 __pycache__
 venv
+data/preview\.wav
+
+data/temp_cover\.jpg
