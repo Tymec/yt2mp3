@@ -1,0 +1,5 @@
+youtube_dl
+requests
+urllib3
+mutagen
+bs4
