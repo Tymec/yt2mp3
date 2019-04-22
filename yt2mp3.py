@@ -22,7 +22,7 @@ class Song:
         self.artist = artist
         self.album = album
         if not album:
-            self.album = self.title.split('(')[0] + "- Single"
+            self.album = self.title.split('(')[0] + " - Single"
         self.full_song = "{} - {}".format(self.artist, self.title)
         self.mp3 = f"downloads/{self.full_song}.mp3"
         self.cover = cover_art
