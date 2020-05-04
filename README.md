@@ -1,4 +1,4 @@
-yt2mp3
+yt2mp3 [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 ===
 ### Converts a youtube video to a mp3 file with ID3 tags
 
