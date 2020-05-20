@@ -1,4 +1,6 @@
-yt2mp3 [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+yt2mp3 
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+[![Requirements Status](https://requires.io/github/Tymec/yt2mp3/requirements.svg?branch=master)](https://requires.io/github/Tymec/yt2mp3/requirements/?branch=master)
 ===
 ### Converts a youtube video to a mp3 file with ID3 tags
 
